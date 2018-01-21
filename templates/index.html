@@ -8,18 +8,18 @@
     <title>Login and Registration</title>
 </head>
 <body>
-    <div id="wrapper">
+    <div class="wrapper">
         <h1>World of Abundance</h1>
         <h2>Please login here:</h2>
         <form id="login_form" action="/authorisation" method="POST">
             <input class="form_field" type="text" name="email" placeholder="Email">
-            <input class="form_field" type="text" name="password" placeholder="Password">
+            <input class="form_field" type="password" name="pw" placeholder="Password">
             <input type="submit" value="Log In">
         </form>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                    <p class="errorMessage">{{message|safe}}</p>
+                    <p class="error_message">{{message|safe}}</p>
                 {% endfor %}
             {% endif %}
         {% endwith %}
@@ -28,10 +28,10 @@
         <h3>Sign Up</h3>
         <h4>everyone should</h4>
         <form id="signup_form" action="signup" method="POST">
-            <input class="form_field" type="text" name="signup_name" placeholder="Name">
-            <input class="form_field" type="text" name="signup_email" placeholder="Email">
-            <input class="form_field" type="password" name="signup_password" placeholder="Password">
-            <input class="form_field" type="password" name="signup_repeat_password" placeholder="Repeat password">
+            <input class="form_field" type="text" name="name" placeholder="Name">
+            <input class="form_field" type="text" name="email" placeholder="Email">
+            <input class="form_field" type="password" name="pw" placeholder="Password">
+            <input class="form_field" type="password" name="rpt_pw" placeholder="Repeat password">
             <input class="form_field" type="submit" id="signup_submit_button" value="Create Account">
         </form>
     </div>

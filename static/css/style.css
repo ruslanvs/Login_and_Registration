@@ -1,4 +1,7 @@
-#wrapper{
+*{
+    font-family: Helvetica;
+}
+.wrapper{
     margin: 50px;
     padding: 50px;
     width: 880px;
@@ -36,15 +39,11 @@ h4{
     margin: 10px 0px 0px 0px;
 }
 
-
-
-
-
-.errorMessage{
+.error_message{
     color: red;
 }
 
-.successMessage{
+.success_message{
     color: green;
 }
 
